@@ -1,0 +1,49 @@
+.input-container {
+  label {
+  }
+  input {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid grey;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+table.table {
+  th {
+    border: 0.5px solid grey;
+    padding-bottom: 0;
+  }
+  td {
+    padding: 0;
+    border: 0.5px solid grey;
+  }
+  input.form-control {
+    border: none;
+    border-radius: 0;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  #gen-container {
+    #generate {
+      border: none;
+      padding: 5px;
+      font-size: 2rem;
+      color:#9a9a9a;
+      background-color: #eeeeee;
+    }
+    @media only print {
+      display: none;
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
