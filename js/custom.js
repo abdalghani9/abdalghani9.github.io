@@ -35,30 +35,34 @@ generate.addEventListener("click", () => {
     "afterend",
     row
   );
-  // calculate each row
-table_input.forEach((input, index) => {
-  input.addEventListener("keyup", () => {
-
-   let tr = input.parentElement.parentElement;
-
-    // Get the index of the <tr> element
-    const rows = Array.from(tr.parentNode.children);
-    const index = rows.indexOf(tr);
-
-    // Log the index
-    console.log("Row index:", index);
-
-    cbm[index].value =
-      length[index].value *
-      width[index].value *
-      height[index].value *
-      qty[index].value;
-  });
-});
 
   console.log(i);
 });
 
+
+  
+  // calculate each row
+  table_input.forEach((input, index) => {
+    input.addEventListener("keyup", () => {
+  
+     let tr = input.parentElement.parentElement;
+  
+      // Get the index of the <tr> element
+      const rows = Array.from(tr.parentNode.children);
+      const index = rows.indexOf(tr);
+  
+      // Log the index
+      console.log("Row index:", index);
+  
+      cbm[index].value =
+        length[index].value *
+        width[index].value *
+        height[index].value *
+        qty[index].value;
+    });
+  });
+
+  
 sm_no.addEventListener("keyup", () => {
   localStorage.setItem("sm-no", sm_no.value);
 });
