@@ -68,15 +68,20 @@
 
                 </tbody>
                 <tfoot>
-                    <th class="text-center" colspan="5">Total</th>
-                    <td>
-                        <input id="total" type="number" class="form-control" readonly tabindex="-1" />
-                    </td>
+                    <tr>
+                        <th class="text-center" colspan="5">Total</th>
+                        <td>
+                            <input id="total" type="number" class="form-control" readonly tabindex="-1" />
+                        </td>
+                    </tr>
+                    <tr id="gen-container">
+                        <td colspan="6" class="border-0">
+                            <button id="generate" class="container" width="100%"><i class="fas fa-plus"></i></button>
+                        </td>
+                    </tr>
                 </tfoot>
             </table>
-            <div id="gen-container">
-                <button id="generate" class="container" width="100%"><i class="fas fa-plus"></i></button>
-            </div>
+
         </div>
     </div>
     <script src="js/custom.js"></script>
