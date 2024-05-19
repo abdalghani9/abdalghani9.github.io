@@ -1,6 +1,4 @@
 .input-container {
-  label {
-  }
   input {
     border: none;
     border-radius: 0;
@@ -11,36 +9,60 @@
   }
 }
 
-table.table {
-  th {
-    border: 0.5px solid grey;
-    padding-bottom: 0;
-  }
-  td {
-    padding: 0;
-    border: 0.5px solid grey;
-  }
-  input.form-control {
-    border: none;
-    border-radius: 0;
-    &:focus {
-      box-shadow: none;
-    }
-  }
-  #gen-container {
-    #generate {
-      border: none;
-      padding: 5px;
-      font-size: 2rem;
-      color:#9a9a9a;
-      background-color: #eeeeee;
-    }
-    @media only print {
-      display: none;
+.gh-btn {
+  &:hover {
+    i {
+      color: red;
+      transition: 0.3s;
     }
   }
 }
 
+table.table {
+  margin-bottom: 0;
+  th {
+    border: 0.5px solid grey;
+    padding-bottom: 0;
+  }
+  tr {
+    &:nth-child(even){
+      background-color: #eef6ff;
+    }
+  }
+  td {
+    padding: 0;
+    border: 0.5px solid grey;
+    &:has(button.del) {
+      border: none;
+      @media only print {
+        display: none;
+      }
+    }
+  }
+  input.form-control {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    &:focus {
+      box-shadow: none;
+    }
+    &:read-only {
+      background-color: transparent;
+    }
+  }
+}
+#gen-container {
+  #generate {
+    border: none;
+    padding: 5px;
+    font-size: 2rem;
+    color: #9a9a9a;
+    background-color: #eeeeee;
+  }
+  @media only print {
+    display: none;
+  }
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

@@ -15,8 +15,8 @@
 
 <body>
     <div class="container">
-        <div class="row text-center my-5">
-            <h1 class="fs-4 text-primary">الخدمة الذهبية للشحن</h1>
+        <div class="row text-center my-4">
+            <h1 class="fs-4 text-grey">الخدمة الذهبية للشحن</h1>
         </div>
         <div class="row">
             <div class="col-6">
@@ -28,19 +28,19 @@
         </div>
 
         <div class="row mt-4">
-            <div class="col-5 col-md-5">
+            <div class="col-12 col-md-5">
                 <div class="input-container">
                     <label for="customer" class="">Customer</label>
                     <input type="text" class="form-control" id="customer" />
                 </div>
             </div>
-            <div class="col-5 col-md-5">
+            <div class="col-7 col-md-5 mt-5 mt-md-0">
                 <div class="input-container">
                     <label for="customer" class="">Goods type</label>
                     <input type="text" class="form-control" id="customer" />
                 </div>
             </div>
-            <div class="col-2 col-md-2">
+            <div class="col-5 mt-5 mt-md-0 col-md-2">
                 <div class="input-container">
                     <label for="number" class="">Qty</label>
                     <input type="number" min="1" max="5" class="form-control" id="qty" />
@@ -61,24 +61,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>1</th>
-                        <td><input type="number" class="form-control length" /></td>
-                        <td><input type="number" class="form-control width" /></td>
-                        <td><input type="number" class="form-control height" /></td>
-                        <td><input type="number" class="form-control qty" /></td>
-                        <td>
-                            <input type="number" class="form-control cbm" readonly tabindex="-1" />
-                        </td>
-                    </tr>
 
-                    <tr id="gen-container">
-                        <td colspan="6">
-                            <button id="generate" class="container" width="100%"><i class="fas fa-plus"></i></button>
-                        </td>
-                    </tr>
+
                 </tbody>
+                <tfoot>
+                    <th class="text-center" colspan="5">Total</th>
+                    <td>
+                        <input id="total" type="number" class="form-control" readonly tabindex="-1" />
+                    </td>
+                </tfoot>
             </table>
+            <div id="gen-container">
+                <button id="generate" class="container" width="100%"><i class="fas fa-plus"></i></button>
+            </div>
         </div>
     </div>
     <script src="js/custom.js"></script>
