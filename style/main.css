@@ -5,7 +5,11 @@
   .input-container input:focus {
     box-shadow: none; }
 
-.gh-btn:hover i {
+.gh-btn {
+  border: none;
+  padding: 5px 10px; }
+
+.del:hover i {
   color: red;
   transition: 0.3s; }
 
@@ -48,5 +52,9 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: textfield;
   margin: 0; }
+
+@media only print {
+  #print {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */

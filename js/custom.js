@@ -26,7 +26,7 @@ function addRow() {
       <input type="number" class="form-control cbm" readonly tabindex="-1" />
   </td>
   
-  <td><button class="gh-btn del form-control rounded-0"><i class="fas fa-trash"></i></button></td>
+  <td><button class=" del form-control rounded-0"><i class="fas fa-trash"></i></button></td>
   `;
 
   table_body.appendChild(new_row);
@@ -54,7 +54,9 @@ function calculateCbm() {
   const height = row.querySelector(".height");
   const qty = row.querySelector(".qty");
   const cbm = row.querySelector(".cbm");
-  cbm.value = length.value * width.value * height.value * qty.value;
+  cbm.value = (length.value * width.value * height.value * qty.value).toFixed(
+    2
+  );
   updateTotalCbm();
 }
 
@@ -64,7 +66,7 @@ function updateTotalCbm() {
   table_cbm.forEach((ele) => {
     total_cbm += parseFloat(ele.value) || 0;
   });
-  document.getElementById("total").value = total_cbm;
+  document.getElementById("total").value = total_cbm.toFixed(2);
 }
 
 function updateRowNumbers() {
@@ -73,5 +75,9 @@ function updateRowNumbers() {
     row.querySelector(".row-number").textContent = index + 1;
   });
 }
+
+document.getElementById("print").addEventListener("click", () => {
+  window.print();
+});
 
 addRow();

@@ -10,6 +10,11 @@
 }
 
 .gh-btn {
+  border: none;
+  padding: 5px 10px;
+}
+
+.del {
   &:hover {
     i {
       color: red;
@@ -25,7 +30,7 @@ table.table {
     padding-bottom: 0;
   }
   tr {
-    &:nth-child(even){
+    &:nth-child(even) {
       background-color: #eef6ff;
     }
   }
@@ -68,4 +73,10 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: textfield;
   margin: 0;
+}
+
+@media only print {
+  #print {
+    display: none;
+  }
 }
